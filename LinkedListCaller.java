@@ -7,6 +7,15 @@ public class LinkedListCaller {
         //LinkedListNode a = new LinkedListNode(insertVal);
         for(int i = 0; i < 10; i++)
             items.insert(new LinkedListNode(i));
+        
+        LinkedListNode a = new LinkedListNode(1000000);
+        items.insert(a);
+
+        for(int i = 0; i < 10; i++)
+            items.insert(new LinkedListNode(10 + i));
+        items.print();
+
+        items.delete(a);
         items.print();
     }
 }
