@@ -62,8 +62,22 @@ public class LinkedList {
         LinkedListNode current = head;
         while(current != null)
         {
-            System.out.println(current.getValue());
+            System.out.println(current.getKey() + ":" + current.getValue());
             current = current.getNext();
         }
+    }
+
+    public LinkedListNode find(int key) {
+        if(head == null)
+            return null;
+        
+        LinkedListNode current = head;
+        while(current != null) 
+        {
+            if(current.getKey() == key)
+                return current;
+            current = current.getNext();
+        }
+        return null;
     }
 }
